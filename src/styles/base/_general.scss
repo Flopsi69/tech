@@ -1,12 +1,165 @@
-h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+  transition: 0.5s;
+  &:hover {
+    color: $blue;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  font-family: $main-font;
+  color: $font-color;
+  background-color: #fff;
+  &:before {
+    content: "";
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    transition: 0.5s;
+    right: 0;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+textarea {
+  resize: none;
 }
 
 .container {
-    @include container();
-    @include sm(max-width, rem(510));
-    @include md(max-width, rem(690));
-    @include lg(max-width, rem(930));
-    @include xl(max-width, rem(1110));
+  @include container();
+  @include md(max-width, rem(690));
+  @include lg(max-width, rem(930));
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.text {
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-left {
+    text-align: left;
+  }
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.trans {
+  transition: 0.5s;
+}
+
+.row-flex {
+  @include row-flex();
+}
+
+.flex {
+  display: flex;
+  &-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.j {
+  &-center {
+    justify-content: center;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+}
+
+.a {
+  &-center {
+    align-items: center;
+  }
+}
+
+.col {
+  @include col();
+}
+
+.w-100 {
+  width: 100%;
+}
+
+a.btn {
+  display: inline-block;
+}
+
+.btn {
+  outline: none;
+  background: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 15px;
+  padding: rem(14) rem(20);
+  &.disabled {
+    filter: grayscale(100%);
+    pointer-events: none;
+  }
+  &_blue {
+    background-color: $blue;
+    color: #fff;
+    &:hover {
+      background-color: rgba($blue, 0.6);
+      color: #fff;
+    }
+  }
+  &_black {
+    background-color: #000;
+    color: #fff;
+    &:hover {
+      background-color: rgba(#000, 0.6);
+      color: #fff;
+    }
+  }
+}
+
+.input {
+  border: none;
+  background: none;
+  outline: none;
+  padding: rem(12) rem(15);
+  transition: 0.5s;
 }

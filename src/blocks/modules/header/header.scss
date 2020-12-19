@@ -1,0 +1,222 @@
+.header {
+  // height: 100px;
+  box-sizing: border-box;
+  padding: 35px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  @include lg-block {
+    padding: rem(10) 0 rem(6);
+  }
+  @include sm-block {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    text-align: center;
+    box-shadow: 0 0 5px 1px rgba(#000, 0.5);
+  }
+  &__logo {
+    @include size-lg(12);
+    @include size-sm(5);
+    @include lg-block {
+      text-align: center;
+    }
+  }
+  &__nav {
+    @include size-lg(12);
+    @include size-sm(7);
+    @include lg-block {
+      margin-top: rem(7);
+      text-align: center;
+    }
+    @include sm-block {
+      display: flex;
+      align-items: center;
+      margin-top: 0;
+      text-align: right;
+      justify-content: flex-end;
+    }
+    .nav {
+      @include sm-block {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: #fff;
+        border-top: 2px solid $blue;
+        border-bottom: 1px solid $blue;
+        box-shadow: 0 10px 12px 2px rgba(black, 0.4);
+        a {
+          padding: 10px;
+          display: block;
+          border-bottom: 1px solid $blue;
+          &.h-basket {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mob-basket {
+  display: none;
+
+  @include sm-block {
+    display: block;
+  }
+}
+
+.burger {
+  display: none;
+  width: 35px;
+  padding: 5px;
+  @include sm-block {
+    display: block;
+  }
+  span {
+    display: block;
+    height: 3px;
+    border-radius: 2px;
+    background-color: black;
+    transition: 0.5s;
+    transform-origin: center;
+    & + span {
+      margin-top: 5px;
+    }
+  }
+  &.active {
+    span {
+      &:first-child {
+        transform: rotate(45deg) translateY(10px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:last-child {
+        transform: rotate(-45deg) translateY(-10px);
+      }
+    }
+  }
+}
+
+.logo {
+  font-size: rem(22);
+}
+
+.nav {
+  font-size: 14px;
+  &__link {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid #fff;
+    transition: color 0.5s;
+    @include lg-block {
+      font-size: rem(12);
+      border-width: 1px;
+      padding: rem(5);
+    }
+    &:hover {
+      color: $blue;
+      border-top-color: $blue;
+      border-bottom-color: $blue;
+    }
+  }
+}
+
+.h-basket {
+  svg {
+    margin-left: rem(8);
+    height: rem(20);
+    width: rem(24);
+    font-size: rem(90);
+  }
+}
+
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  z-index: 999;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 350px;
+  background-color: #fff;
+  transition: 0.5s;
+  transform: translateX(100%);
+  @include sm-block {
+    width: 280px;
+  }
+  &__total {
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .b-product {
+    flex-wrap: wrap;
+    @include md-block {
+      text-align: left;
+    }
+    &__image {
+      @include size(4);
+      height: auto;
+      margin-right: 0;
+    }
+    &__info {
+      @include size(8);
+      margin-bottom: 30px;
+      @include sm-block {
+        margin-top: 0;
+      }
+    }
+    &__price {
+      @include sm-block {
+        justify-content: flex-start;
+      }
+    }
+    &__count {
+      @include sm-block {
+        justify-content: flex-start;
+      }
+    }
+  }
+  &.active {
+    transform: translateX(0);
+  }
+  &__close {
+    color: white;
+    padding: 0;
+    font-size: 48px;
+    margin-top: -10px;
+  }
+  &-active {
+    position: relative;
+    &:before {
+      background: rgba(0, 0, 0, 0.6);
+      pointer-events: auto;
+    }
+  }
+
+  &__head {
+    background: black;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px 25px;
+  }
+  &__body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0 25px;
+  }
+  &__footer {
+    margin-top: auto;
+    padding: 30px 25px;
+    border-top: 1px solid rgba(#000, 0.35);
+  }
+}

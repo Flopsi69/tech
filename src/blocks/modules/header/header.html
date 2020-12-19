@@ -1,0 +1,70 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175558229-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175558229-1');
+</script>
+
+<header class='header'>
+  <div class="container">
+    <div class="row-flex header__row a-center j-between">
+      <a class='logo header__logo col' href="./index.html" target="_self">I-ROBOT</a>
+
+      <div class="header__nav col">
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a class='nav__link h-basket mob-basket inline-flex a-center' href="./basket.html">
+          <svg style='margin-left: 0;' xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+            viewBox="0 0 197.7 166" preserveAspectRatio="xMinYMax meet" data-hook="svg-icon-2">
+            <path
+              d="M197.9 55.9L169.9 127.4 64.5 127.4 27.6 29.8 0 29.8 0.2 16.7 36.5 16.7 73.4 114.3 160.9 114.3 183 55.9">
+            </path>
+            <circle cx="143.8" cy="153" r="13"></circle>
+            <circle cx="90.8" cy="153" r="13"></circle><text class="items-count" text-anchor="middle" x="116" y="35"
+              dy=".48em">0</text>
+          </svg>
+        </a>
+        <nav class="nav">
+          <a class='nav__link' href="./about.html">Over ons</a>
+          <a class='nav__link' href="./cat.html">Producten</a>
+          <a class='nav__link' href="./delivery.html">Betaling en levering</a>
+          <a class='nav__link' href="./guarantee.html">Garantie en service</a>
+          <a class='nav__link' href="./return.html">Ruilen en retourneren</a>
+          <!-- <a class='nav__link' href="./index.html">Hoofdwebsite</a> -->
+          <a class='nav__link h-basket inline-flex a-center' href="./basket.html">
+            Winkelkarretje
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 197.7 166"
+              preserveAspectRatio="xMinYMax meet" data-hook="svg-icon-2">
+              <path
+                d="M197.9 55.9L169.9 127.4 64.5 127.4 27.6 29.8 0 29.8 0.2 16.7 36.5 16.7 73.4 114.3 160.9 114.3 183 55.9">
+              </path>
+              <circle cx="143.8" cy="153" r="13"></circle>
+              <circle cx="90.8" cy="153" r="13"></circle><text class="items-count" text-anchor="middle" x="116" y="35"
+                dy=".48em">0</text>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<sidebar class="sidebar">
+  <div class="sidebar__head flex a-center j-between">
+    Корзина
+    <button class='btn sidebar__close'>&#x203A;</button>
+  </div>
+  <div class="sidebar__body">
+    <div class="sidebar__products b-product__list"></div>
+    <div class="js-basket__total sidebar__total">€ 0</div>
+  </div>
+  <div class="sidebar__footer">
+    <a href='./basket.html' class="btn btn_blue sidebar__buy w-100">Een bestelling plaatsen</a>
+  </div>
+</sidebar>

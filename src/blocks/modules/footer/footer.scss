@@ -1,0 +1,214 @@
+.footer {
+  border-top: 1px solid #eee;
+  padding: 25px 0;
+  @include sm-block {
+    padding: 15px 0 20px;
+  }
+  &__nav {
+    margin-bottom: rem(25);
+    @include sm-block {
+      flex-flow: column;
+      text-align: center;
+      justify-content: center;
+    }
+    .nav__link {
+    }
+  }
+  &__images {
+    margin-bottom: 20px;
+    align-items: center;
+    img {
+      max-height: 50px;
+      max-width: 80px;
+    }
+  }
+}
+
+.copyright {
+  font-size: rem(14);
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  padding: rem(20) rem(15);
+  width: 100%;
+  overflow: auto;
+  max-height: 100vh;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  &__close {
+    @include sm-block {
+      top: 10px;
+      right: 10px;
+      padding: 7px;
+      border-color: $blue;
+    }
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: 1px solid transparent;
+    padding: 10px;
+    transition: 0.3s;
+    border-radius: 50%;
+    line-height: 0;
+    cursor: pointer;
+    &:hover {
+      border-color: $blue;
+      svg {
+        fill: $blue;
+      }
+    }
+
+    svg {
+      @include sm-block {
+        width: 12px;
+        height: 12px;
+      }
+      width: 17px;
+      height: 17px;
+      transition: 0.3s;
+    }
+  }
+
+  &__overlay {
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#191919, 0.55);
+  }
+
+  &__content {
+    display: none;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    margin: auto;
+    border: 1px solid $blue;
+    padding: rem(40) rem(30);
+    border-radius: rem(10);
+    background-color: #ffffff;
+    box-shadow: 0 0 15px 1px rgba(229, 215, 117, 0.5);
+    @include sm-block {
+      padding-bottom: rem(40);
+    }
+    &.active {
+      display: block;
+    }
+  }
+
+  &__title {
+    position: relative;
+    color: #191919;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    padding-bottom: rem(15);
+    margin-bottom: rem(20);
+    @include sm-block {
+      font-size: rem(20);
+      margin-bottom: rem(15);
+      padding-bottom: rem(15);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      max-width: 490px;
+      height: 5px;
+      border-radius: 3px;
+      background-color: $blue;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  &-buy {
+    &__bank {
+      margin-bottom: 15px;
+      .modal-buy__methods &.active {
+        background-color: black;
+        border-color: black;
+        color: #fff;
+      }
+    }
+    &__step {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    &__paypal {
+      filter: grayscale(100%);
+      font-size: 12px;
+      color: #eee;
+      pointer-events: none;
+    }
+    &__bill {
+      img {
+        height: 50px;
+      }
+      margin-bottom: 20px;
+    }
+    &__methods {
+      img {
+        max-height: 40px;
+        margin: 0 6px;
+      }
+      .col {
+        @include size(6);
+        @include size-sm(12);
+        @include sm-block {
+          & + .col {
+            margin-top: 15px;
+          }
+        }
+        background: none;
+        border: 2px solid $blue;
+        border-radius: 5px;
+        color: black;
+        &:hover {
+          background: rgba($blue, 0.3);
+        }
+      }
+    }
+    &__form {
+      .input {
+        border: 1px solid rgba($blue, 0.5);
+        width: 100%;
+        margin-bottom: 12px;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+      &-inputs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .input {
+          width: 49%;
+        }
+      }
+    }
+  }
+}
