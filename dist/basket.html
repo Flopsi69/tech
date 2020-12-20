@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Basket</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+
+  <!-- Custom -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175558229-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175558229-1');
+</script>
+
+<header class='header'>
+  <div class="container">
+    <div class="row-flex header__row a-center j-between">
+      <a class='logo header__logo col' href="./index.html" target="_self">I-ROBOT</a>
+
+      <div class="header__nav col">
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a class='nav__link h-basket mob-basket inline-flex a-center' href="./basket.html">
+          <svg style='margin-left: 0;' xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+            viewBox="0 0 197.7 166" preserveAspectRatio="xMinYMax meet" data-hook="svg-icon-2">
+            <path
+              d="M197.9 55.9L169.9 127.4 64.5 127.4 27.6 29.8 0 29.8 0.2 16.7 36.5 16.7 73.4 114.3 160.9 114.3 183 55.9">
+            </path>
+            <circle cx="143.8" cy="153" r="13"></circle>
+            <circle cx="90.8" cy="153" r="13"></circle><text class="items-count" text-anchor="middle" x="116" y="35"
+              dy=".48em">0</text>
+          </svg>
+        </a>
+        <nav class="nav">
+          <a class='nav__link' href="./about.html">Over ons</a>
+          <a class='nav__link' href="./cat.html">Producten</a>
+          <a class='nav__link' href="./delivery.html">Betaling en levering</a>
+          <a class='nav__link' href="./guarantee.html">Garantie en service</a>
+          <a class='nav__link' href="./return.html">Ruilen en retourneren</a>
+          <!-- <a class='nav__link' href="./index.html">Hoofdwebsite</a> -->
+          <a class='nav__link h-basket inline-flex a-center' href="./basket.html">
+            Winkelkarretje
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 197.7 166"
+              preserveAspectRatio="xMinYMax meet" data-hook="svg-icon-2">
+              <path
+                d="M197.9 55.9L169.9 127.4 64.5 127.4 27.6 29.8 0 29.8 0.2 16.7 36.5 16.7 73.4 114.3 160.9 114.3 183 55.9">
+              </path>
+              <circle cx="143.8" cy="153" r="13"></circle>
+              <circle cx="90.8" cy="153" r="13"></circle><text class="items-count" text-anchor="middle" x="116" y="35"
+                dy=".48em">0</text>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<sidebar class="sidebar">
+  <div class="sidebar__head flex a-center j-between">
+    Корзина
+    <button class='btn sidebar__close'>&#x203A;</button>
+  </div>
+  <div class="sidebar__body">
+    <div class="sidebar__products b-product__list"></div>
+    <div class="js-basket__total sidebar__total">€ 0</div>
+  </div>
+  <div class="sidebar__footer">
+    <a href='./basket.html' class="btn btn_blue sidebar__buy w-100">Een bestelling plaatsen</a>
+  </div>
+</sidebar>
+
+  <main class='main'>
+    <section class='section basket-wrap'>
+      <div class="container">
+        <div class="basket__row">
+          <div class="basket">
+            <div class="basket__title">Mijn winkelwagen</div>
+            <div class="b-product__list">
+
+            </div>
+
+            <div class="b-addition">
+              <div class="b-addition__item">
+                <div class="b-addition__title">
+                  <svg viewBox="0 0 14 16" fill="currentColor" width="14" height="16" class="_3IcIh">
+                    <g id="final-cart" stroke="none" fill="none" stroke-width="1" fill-rule="evenodd">
+                      <g id="general-layout" transform="translate(-515 -839)" fill="currentColor">
+                        <g id="coupon-icon" transform="rotate(30 -1300.653 1393.349)">
+                          <path
+                            d="M1,14.0046024 C0.999339408,13.9996515 9.00460243,14 9.00460243,14 C8.99965149,14.0006606 9,5.41421356 9,5.41421356 L5,1.41421356 L1,5.41421356 L1,14.0046024 Z M-2.72848411e-12,5 L5,-4.66116035e-12 L10,5 L10,14.0046024 C10,14.5543453 9.5443356,15 9.00460243,15 L0.995397568,15 C0.445654671,15 -2.72848411e-12,14.5443356 -2.72848411e-12,14.0046024 L-2.72848411e-12,5 Z"
+                            id="Rectangle-6" fill-rule="nonzero"></path>
+                          <circle id="Oval-2" cx="5" cy="5" r="1"></circle>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                  Promotiecode invullen
+                </div>
+                <div class="b-addition__body">
+                  <div class="flex">
+                    <input type="text" placeholder="Voer een promotiecode n">
+                    <button class='btn btn_blue'>Toepassen</button>
+                  </div>
+                </div>
+              </div>
+              <div class="b-addition__item">
+                <div class="b-addition__title">
+                  <svg viewBox="0 0 12 13" fill="currentColor" width="12" height="13" class="_3IcIh">
+                    <g id="final-cart" stroke="none" fill="none" stroke-width="1" fill-rule="evenodd">
+                      <g id="general-layout" transform="translate(-515 -882)">
+                        <g id="print-icon" transform="translate(515 882)">
+                          <path d="M0.5,0.5 L8.27826634,0.5 L11.5,3.73740249 L11.5,12.5 L0.5,12.5 L0.5,0.5 Z"
+                            id="Rectangle-4-Copy" stroke="currentColor"></path>
+                          <path d="M10.7928932,3.5 L8.5,3.5 L8.5,1.20710678 L10.7928932,3.5 Z" id="Rectangle-10"
+                            stroke="currentColor"></path>
+                          <path id="Rectangle-18" fill="currentColor" d="M3 3H6V4H3z"></path>
+                          <path id="Rectangle-18-Copy" fill="currentColor" d="M3 6H9V7H3z"></path>
+                          <path id="Rectangle-18-Copy-2" fill="currentColor" d="M3 9H9V10H3z"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                  Aantekening toevoegen
+                </div>
+                <div class="b-addition__body">
+                  <textarea placeholder="Instructies? Speciale verzoeken? Voeg ze hier toe." name="" id="" cols="50"
+                    rows="6"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="ssl-secure"></div>
+
+          </div>
+          <div class="basket-total">
+            <div class="basket__title">Registratie</div>
+            <div class="basket-total__info">
+              <table>
+                <tr>
+                  <td>Totaal</td>
+                  <td class='js-basket__total'>€ 0</td>
+                </tr>
+                <tr>
+                  <td>Levering </td>
+                  <td>Gratis</td>
+                </tr>
+              </table>
+            </div>
+            <table class="basket-total__summary">
+              <tr>
+                <td>Betalen</td>
+                <td class='js-basket__total'>€ 0</td>
+              </tr>
+            </table>
+            <button class="btn btn_blue w-100 basket-total__buy flex a-center j-center modal-trigger"
+              data-modal='.modal-buy'>
+              <svg viewBox="0 0 11 14" fill="currentColor" width="11" height="14">
+                <g id="Page-1" stroke="none" fill="none" stroke-width="1" fill-rule="evenodd">
+                  <g id="Group" fill="currentColor">
+                    <path
+                      d="M0,12.7905281 C0,13.348044 0.444836974,13.8 0.995577499,13.8 L10.0044225,13.8 C10.5542648,13.8 11,13.3515084 11,12.7905281 L11,6.00947189 C11,5.45195596 10.555163,5 10.0044225,5 L0.995577499,5 C0.445735229,5 0,5.44849157 0,6.00947189 L0,12.7905281 Z"
+                      id="Stroke-1"></path>
+                    <path
+                      d="M9.5,5 L9.5,4.07597662 C9.5,2.08610548 7.69574843,0.5 5.5,0.5 C3.30425157,0.5 1.5,2.08610548 1.5,4.07597662 L1.5,5 L2.5,5 L2.5,4.07597662 C2.5,2.66911962 3.82991528,1.5 5.5,1.5 C7.17008472,1.5 8.5,2.66911962 8.5,4.07597662 L8.5,5 L9.5,5 Z"
+                      id="Stroke-3" fill-rule="nonzero"></path>
+                  </g>
+                </g>
+              </svg>
+              Kopen
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__images row-flex j-center a-center">
+      <img class='col' src="img/post.png" alt="">
+      <img class='col' src="img/method-paypal.png" alt="">
+      <img class='col' src="img/method-ideal.png" alt="">
+    </div>
+    <nav class="nav footer__nav flex j-center">
+      <a class='nav__link' href="./about.html">Over ons</a>
+      <a class='nav__link' href="./cat.html">Producten</a>
+      <a class='nav__link' href="./delivery.html">Betaling en levering</a>
+      <a class='nav__link' href="./guarantee.html">Garantie en service</a>
+      <a class='nav__link' href="./return.html">Ruilen en retourneren</a>
+    </nav>
+    <div class="copyright text-center upper">
+      &copy; 2017-2020 I-robot.
+    </div>
+  </div>
+</footer>
+
+<div class="modal">
+  <div class="modal__overlay"></div>
+
+  <!-- Modal Consult -->
+  <div class="modal__content modal-buy">
+    <!-- Close modal -->
+    <div class="modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" width="512" height="512">
+        <path
+          d="M294.111 256.001L504.109 46.003c10.523-10.524 10.523-27.586 0-38.109-10.524-10.524-27.587-10.524-38.11 0L256 217.892 46.002 7.894C35.478-2.63 18.416-2.63 7.893 7.894s-10.524 27.586 0 38.109l209.998 209.998L7.893 465.999c-10.524 10.524-10.524 27.586 0 38.109 10.524 10.524 27.586 10.523 38.109 0L256 294.11l209.997 209.998c10.524 10.524 27.587 10.523 38.11 0 10.523-10.524 10.523-27.586 0-38.109L294.111 256.001z" />
+      </svg>
+    </div>
+
+    <div class="modal-buy__step active" data-step='1'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Registratie</h2>
+
+      <!-- Form -->
+      <form action='' class="modal-buy__form">
+        <!-- <div class="modal-buy__form-inputs"> -->
+        <!-- </div> -->
+        <input class='input' name='name' type="text" placeholder="Naam" required>
+        <input class='input' name='sername' type="text" placeholder="Achternaam" required>
+        <input class='input' name='email' type="email" placeholder="Email" required>
+        <input class='input' name='phone' type="tel" placeholder="Telefoon" required>
+        <input class='input' name='city' type="text" placeholder="Stad" required>
+        <input class='input' name='address' type="text" placeholder="Adres" required>
+        <input class='input' name='zip' type="text" placeholder="Postcode" required>
+        <button type='submit' class='btn btn_blue w-100 modal-buy__next'>Betalen</button>
+      </form>
+    </div>
+
+    <div class="modal-buy__step" data-step='2'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Selecteer betalingsmethode</h2>
+
+      <div class="modal-buy__methods row-flex">
+        <button class='btn btn_blue w-100 modal-buy__next col flex a-center j-center'><img src="img/method-ideal.png">
+          Ideal</button>
+        <button disabled class='btn btn_blue w-100 modal-buy__paypal modal-buy__next col'><img
+            src="img/method-paypal.png">
+          PayPal (Tijdelijk niet beschikbaar  )</button>
+      </div>
+    </div>
+
+    <div class="modal-buy__step" data-step='3'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Selecteer bank</h2>
+
+      <div class="modal-buy__methods row-flex">
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>ING</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>RaboBank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>ABN Amro
+          Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>SNS Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>ASN Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Triodos
+          Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>RegioBank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Van Lanschot
+          Bankiers</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Knab</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Bunq</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Moneyou</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Handelsbanken</button>
+      </div>
+      <button type='submit' class='btn btn_blue w-100 modal-buy__next disabled'>Ontvang een factuur</button>
+    </div>
+
+    <div class="modal-buy__step text-center" data-step='4'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Facturering</h2>
+
+      <div class="modal-buy__bill">
+        <img src="img/ajax-loader.gif" alt="">
+        <p>Verwacht lopende facturering</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal client -->
+  <div class="modal__content modal-success">
+    <!-- Close modal -->
+    <div class="modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" width="512" height="512">
+        <path
+          d="M294.111 256.001L504.109 46.003c10.523-10.524 10.523-27.586 0-38.109-10.524-10.524-27.587-10.524-38.11 0L256 217.892 46.002 7.894C35.478-2.63 18.416-2.63 7.893 7.894s-10.524 27.586 0 38.109l209.998 209.998L7.893 465.999c-10.524 10.524-10.524 27.586 0 38.109 10.524 10.524 27.586 10.523 38.109 0L256 294.11l209.997 209.998c10.524 10.524 27.587 10.523 38.11 0 10.523-10.524 10.523-27.586 0-38.109L294.111 256.001z" />
+      </svg>
+    </div>
+
+    <!-- Title -->
+    <h2 class="modal__title text-center" data-lang-en='Successfully'>Успешно</h2>
+
+    <div class="text-center" data-lang-en='You will be contacted shortly!'>В ближайшее время с Вами
+      свяжутся!
+    </div>
+    <div class="text-center modal-client__btns">
+      <button class='btn btn_orange btn-close-modal w-100' data-lang-en='Ok'>Ок</button>
+    </div>
+  </div>
+</div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>

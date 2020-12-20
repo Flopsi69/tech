@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>iRobot Roomba 976 </title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+
+  <!-- Custom -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175558229-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175558229-1');
+</script>
+
+<header class='header'>
+  <div class="container">
+    <div class="row-flex header__row a-center j-between">
+      <a class='logo header__logo col' href="./index.html" target="_self">I-ROBOT</a>
+
+      <div class="header__nav col">
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a class='nav__link h-basket mob-basket inline-flex a-center' href="./basket.html">
+          <svg style='margin-left: 0;' xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+            viewBox="0 0 197.7 166" preserveAspectRatio="xMinYMax meet" data-hook="svg-icon-2">
+            <path
+              d="M197.9 55.9L169.9 127.4 64.5 127.4 27.6 29.8 0 29.8 0.2 16.7 36.5 16.7 73.4 114.3 160.9 114.3 183 55.9">
+            </path>
+            <circle cx="143.8" cy="153" r="13"></circle>
+            <circle cx="90.8" cy="153" r="13"></circle><text class="items-count" text-anchor="middle" x="116" y="35"
+              dy=".48em">0</text>
+          </svg>
+        </a>
+        <nav class="nav">
+          <a class='nav__link' href="./about.html">Over ons</a>
+          <a class='nav__link' href="./cat.html">Producten</a>
+          <a class='nav__link' href="./delivery.html">Betaling en levering</a>
+          <a class='nav__link' href="./guarantee.html">Garantie en service</a>
+          <a class='nav__link' href="./return.html">Ruilen en retourneren</a>
+          <!-- <a class='nav__link' href="./index.html">Hoofdwebsite</a> -->
+          <a class='nav__link h-basket inline-flex a-center' href="./basket.html">
+            Winkelkarretje
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 197.7 166"
+              preserveAspectRatio="xMinYMax meet" data-hook="svg-icon-2">
+              <path
+                d="M197.9 55.9L169.9 127.4 64.5 127.4 27.6 29.8 0 29.8 0.2 16.7 36.5 16.7 73.4 114.3 160.9 114.3 183 55.9">
+              </path>
+              <circle cx="143.8" cy="153" r="13"></circle>
+              <circle cx="90.8" cy="153" r="13"></circle><text class="items-count" text-anchor="middle" x="116" y="35"
+                dy=".48em">0</text>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<sidebar class="sidebar">
+  <div class="sidebar__head flex a-center j-between">
+    Корзина
+    <button class='btn sidebar__close'>&#x203A;</button>
+  </div>
+  <div class="sidebar__body">
+    <div class="sidebar__products b-product__list"></div>
+    <div class="js-basket__total sidebar__total">€ 0</div>
+  </div>
+  <div class="sidebar__footer">
+    <a href='./basket.html' class="btn btn_blue sidebar__buy w-100">Een bestelling plaatsen</a>
+  </div>
+</sidebar>
+
+  <main class='main'>
+
+    <section class='product__head container'>
+      <div class="row-flex j-between">
+        <div class="breadcrumbs flex a-center col">
+          <a href="./index.html">Startpagina</a>
+          <a class='active js-product' href="#" data-product-value='name'>iRobot Roomba 960</a>
+        </div>
+        <div class="product-nav flex a-center col">
+          <a class='product-nav__prev' href="./product-roomba605.html">&#x276E;&nbsp;&nbsp;Vorige</a>
+          <a class='product-nav__next' href="./product-roomba671.html">Volgende&nbsp;&nbsp;&#x276F;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="product" data-product-id='606'>
+      <div class="container">
+        <div class="portfolio">
+          <div class="portfolio-main">
+            <div class='portfolio-main__item'>
+              <img src="img/products/606/1.jpg" alt="">
+            </div>
+            <div class='portfolio-main__item'>
+              <img src="img/products/606/2.jpg" alt="">
+            </div>
+            <div class='portfolio-main__item'>
+              <img src="img/products/606/3.jpg" alt="">
+            </div>
+            <div class='portfolio-main__item'>
+              <img src="img/products/606/4.jpg" alt="">
+            </div>
+            <div class='portfolio-main__item'>
+              <img src="img/products/606/5.jpg" alt="">
+            </div>
+          </div>
+          <div class="portfolio-nav">
+            <div class='portfolio-nav__item'>
+              <img src="img/products/606/1.jpg" alt="">
+            </div>
+            <div class='portfolio-nav__item'>
+              <img src="img/products/606/2.jpg" alt="">
+            </div>
+            <div class='portfolio-nav__item'>
+              <img src="img/products/606/3.jpg" alt="">
+            </div>
+            <div class='portfolio-nav__item'>
+              <img src="img/products/606/4.jpg" alt="">
+            </div>
+            <div class='portfolio-nav__item'>
+              <img src="img/products/606/5.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="product__info-wrap row-flex">
+          <div class="product__info col">
+            <h1 class="product__title js-product" data-product-value='name'></h1>
+            <div class="product__descr">
+              <div class="product__block">
+                <strong>Productinformatie</strong>
+                <p>
+                  Roomba 606 zorgt voor schone vloeren, elke dag weer. Het krachtige schoonmaaksysteem vangt vuil, stof, alle soorten haar en grotere stukken vuil op van harde vloeren en tapijt. Roomba 606 werkt door middel van gepatenteerde vuil-opsporingssensoren harder op de plekken waar vuil zich ophoopt. iRobot is nummer 1 in de verkoop van robotstofzuigers en het enige toonaangevende merk met twee tegen elkaar in draaiende borstels; één om het vuil los te maken van de vloer, en de ander om het vuil op te pakken.
+                </p>
+              </div>
+
+              <div class="product__block">
+                <strong>Slim</strong>
+                <ul>
+                  <li>
+                    Moeiteloze navigatie: iAdapt Responsive Navigation bevat een heel scala aan sensoren zodat jouw Roomba zijn weg vindt en grondig stofzuigt in alle hoeken en gaten;
+                  </li>
+
+                  <li>
+                    Reinigt onder banken en stoelen: door het lage ontwerp kan de Roomba ook reinigen onder de meeste meubels, waardoor er geen verborgen stofnesten kunnen ontstaan.
+                  </li>
+
+                  <li>
+                    Valt niet van de trap: Afgrondsensoren zorgen ervoor dat de Roomba trappen of andere gevaarlijke afgronden vermijdt.
+                  </li>
+                  
+                  <li>
+                    Detecteert vuil dat makkelijk over het hoofd wordt gezien: Gebruikt optische en akoestische sensoren om plekken met hoge concentraties vuil, stof en huisdierharen te detecteren en reinigt extra grondig waar dat nodig is.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="product__block">
+                <strong>Eenvoudig</strong>
+                <ul>
+                  <li>
+                    Druk op CLEAN: Met één druk op een knop gaat de Roomba aan het werk zonder dat er geprogrammeerd hoeft te worden.
+                  </li>
+                  <li>
+                    Reinigt alle vloertypen: De Roomba past zich automatisch aan verschillende vloersoorten aan terwijl deze zich door uw huis beweegt en reinigt net zo gemakkelijk tapijt als tegels, hardhouten vloeren en laminaatvloeren.
+                  </li>
+                  <li>
+                    Keert automatisch terug naar het oplaadstation en laadt zichzelf op: De Roomba is altijd klaar om te reinigen omdat hij na het reinigen automatisch terugkeert naar zijn Home Base om zich op te laden. 
+                  </li>
+                </ul>
+              </div>
+
+              <div class="product__block">
+                <strong>Reinigen</strong>
+                <ul>
+                  <li>
+                    Gebruikt een combinatie van bewegen, borstelen en zuigen: Het reinigingssysteem met drie fasen gebruikt een combinatie van drie geavanceerde technologieën die vuilopname en zuigkracht evenwichtig gebruiken.
+                  </li>
+                  <li>
+                    Veegt langs wanden en in hoeken: De draaiende zijborstel zorgt ervoor dat stof en haren in de baan van het 3-staps reinigingssysteem terechtkomen.
+                  </li>
+                  <li>
+                    AeroVac filter: Filtert fijn stof en andere kleine deeltjes uit de lucht.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="product__spec">
+              <div class="product__spec-block">
+                <div class="product__table-title">Design</div>
+                <table class="product__table">
+                  <tr>
+                    <td>Soort stofopvang</td>
+                    <td>Zakloos</td>
+                  </tr>
+                  <tr>
+                    <td>Stof capaciteit	</td>
+                    <td>0.6 l</td>
+                  </tr>
+                  <tr>
+                    <td>Kleur van het product	</td>
+                    <td>Zwart</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="product__spec-block">
+                <div class="product__table-title">Prestatie</div>
+                <table class="product__table">
+                  <tr>
+                    <td>Reinigt ondergronden</td>
+                    <td>Tapijt, Harde vloeren</td>
+                  </tr>
+                  <tr>
+                    <td>HEPA filtersysteem</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Geluidsniveau</td>
+                    <td>60 dB</td>
+                  </tr>
+                  <tr>
+                    <td>Trapdetectie</td>
+                    <td>+</td>
+                  </tr>
+                  <tr>
+                    <td>Automatisch terug naar basisstation	</td>
+                    <td>+</td>
+                  </tr>
+                  <tr>
+                    <td>Stofzuigerprogramma's	</td>
+                    <td>Automatisch</td>
+                  </tr>
+                  <tr>
+                    <td>Op afstand bedienbaar	</td>
+                    <td>-</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="product__spec-block">
+                <div class="product__table-title">Technische details</div>
+                <table class="product__table">
+                  <tr>
+                    <td>Looptijd</td>
+                    <td>60 min</td>
+                  </tr>
+                  <tr>
+                    <td>Uitgestelde start timer	</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>SMART technologie	</td>
+                    <td>+</td>
+                  </tr>
+                  <tr>
+                    <td>Inclusief dockingstation	</td>
+                    <td>+</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="product__spec-block">
+                <div class="product__table-title">Energie</div>
+                <table class="product__table">
+                  <tr>
+                    <td>Accu/batterij energie-opslagtechnologie	</td>
+                    <td>Lithium-Ion (Li-Ion)</td>
+                  </tr>
+                  <tr>
+                    <td>Accu/batterij oplaadtijd	</td>
+                    <td>3 uur</td>
+                  </tr>
+                  <tr>
+                    <td>Accu/batterij gebruiksduur	</td>
+                    <td>1 uur</td>
+                  </tr>
+                  <tr>
+                    <td>Typisch stroomverbruik	</td>
+                    <td>50 W</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="product__spec-block">
+                <div class="product__table-title">Verpakking</div>
+                <table class="product__table">
+                  <tr>
+                    <td>Afstandsbediening </td>
+                    <td>-</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="product__spec-block">
+                <div class="product__table-title">Inhoud van de verpakking</div>
+                <table class="product__table">
+                  <tr>
+                    <td>Inclusief virtuele barrière	</td>
+                    <td>-</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="product__spec-block">
+                <div class="product__table-title">Gewicht en omvang</div>
+                <table class="product__table">
+                  <tr>
+                    <td>Hoogte</td>
+                    <td>9.2 cm</td>
+                  </tr>
+                  <tr>
+                    <td>Breedte</td>
+                    <td>34 cm</td>
+                  </tr>
+                  <tr>
+                    <td>Diepte</td>
+                    <td>34 cm</td>
+                  </tr>
+                  <tr>
+                    <td>Diameter</td>
+                    <td>34 cm</td>
+                  </tr>
+                  <tr>
+                    <td>Gewicht</td>
+                    <td>3.6 kg</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="product__spec-block">
+                <div class="product__table-title">Productdetails</div>
+                <table class="product__table">
+                  <tr>
+                    <td>EAN</td>
+                    <td>5060359287199</td>
+                  </tr>
+                  <tr>
+                    <td>Merk</td>
+                    <td>iRobot</td>
+                  </tr>
+                  <tr>
+                    <td>Type</td>
+                    <td>ROOMBA 606</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="product__action col">
+            <div class="product__action-inner">
+              <div class="product__price flex a-center">
+                <div class="product__price-old js-product" data-product-value='oldPrice'></div>
+                <div class="product__price-new js-product" data-product-value='newPrice'>€ 439,00</div>
+              </div>
+              <div class="product__count-wrap">
+                <div class="product__count-title">Aantal</div>
+                <div class="count product__count flex">
+                  <button class='btn count__btn count__minus'>-</button>
+                  <input value='1' class='count__input input' type="text" disabled>
+                  <button class='btn count__btn count__plus'>+</button>
+                </div>
+              </div>
+              <button class="btn btn_blue product__buy w-100">In winkelwagen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__images row-flex j-center a-center">
+      <img class='col' src="img/post.png" alt="">
+      <img class='col' src="img/method-paypal.png" alt="">
+      <img class='col' src="img/method-ideal.png" alt="">
+    </div>
+    <nav class="nav footer__nav flex j-center">
+      <a class='nav__link' href="./about.html">Over ons</a>
+      <a class='nav__link' href="./cat.html">Producten</a>
+      <a class='nav__link' href="./delivery.html">Betaling en levering</a>
+      <a class='nav__link' href="./guarantee.html">Garantie en service</a>
+      <a class='nav__link' href="./return.html">Ruilen en retourneren</a>
+    </nav>
+    <div class="copyright text-center upper">
+      &copy; 2017-2020 I-robot.
+    </div>
+  </div>
+</footer>
+
+<div class="modal">
+  <div class="modal__overlay"></div>
+
+  <!-- Modal Consult -->
+  <div class="modal__content modal-buy">
+    <!-- Close modal -->
+    <div class="modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" width="512" height="512">
+        <path
+          d="M294.111 256.001L504.109 46.003c10.523-10.524 10.523-27.586 0-38.109-10.524-10.524-27.587-10.524-38.11 0L256 217.892 46.002 7.894C35.478-2.63 18.416-2.63 7.893 7.894s-10.524 27.586 0 38.109l209.998 209.998L7.893 465.999c-10.524 10.524-10.524 27.586 0 38.109 10.524 10.524 27.586 10.523 38.109 0L256 294.11l209.997 209.998c10.524 10.524 27.587 10.523 38.11 0 10.523-10.524 10.523-27.586 0-38.109L294.111 256.001z" />
+      </svg>
+    </div>
+
+    <div class="modal-buy__step active" data-step='1'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Registratie</h2>
+
+      <!-- Form -->
+      <form action='' class="modal-buy__form">
+        <!-- <div class="modal-buy__form-inputs"> -->
+        <!-- </div> -->
+        <input class='input' name='name' type="text" placeholder="Naam" required>
+        <input class='input' name='sername' type="text" placeholder="Achternaam" required>
+        <input class='input' name='email' type="email" placeholder="Email" required>
+        <input class='input' name='phone' type="tel" placeholder="Telefoon" required>
+        <input class='input' name='city' type="text" placeholder="Stad" required>
+        <input class='input' name='address' type="text" placeholder="Adres" required>
+        <input class='input' name='zip' type="text" placeholder="Postcode" required>
+        <button type='submit' class='btn btn_blue w-100 modal-buy__next'>Betalen</button>
+      </form>
+    </div>
+
+    <div class="modal-buy__step" data-step='2'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Selecteer betalingsmethode</h2>
+
+      <div class="modal-buy__methods row-flex">
+        <button class='btn btn_blue w-100 modal-buy__next col flex a-center j-center'><img src="img/method-ideal.png">
+          Ideal</button>
+        <button disabled class='btn btn_blue w-100 modal-buy__paypal modal-buy__next col'><img
+            src="img/method-paypal.png">
+          PayPal (Tijdelijk niet beschikbaar  )</button>
+      </div>
+    </div>
+
+    <div class="modal-buy__step" data-step='3'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Selecteer bank</h2>
+
+      <div class="modal-buy__methods row-flex">
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>ING</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>RaboBank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>ABN Amro
+          Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>SNS Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>ASN Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Triodos
+          Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>RegioBank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Van Lanschot
+          Bankiers</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Knab</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Bunq</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Moneyou</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Handelsbanken</button>
+      </div>
+      <button type='submit' class='btn btn_blue w-100 modal-buy__next disabled'>Ontvang een factuur</button>
+    </div>
+
+    <div class="modal-buy__step text-center" data-step='4'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Facturering</h2>
+
+      <div class="modal-buy__bill">
+        <img src="img/ajax-loader.gif" alt="">
+        <p>Verwacht lopende facturering</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal client -->
+  <div class="modal__content modal-success">
+    <!-- Close modal -->
+    <div class="modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" width="512" height="512">
+        <path
+          d="M294.111 256.001L504.109 46.003c10.523-10.524 10.523-27.586 0-38.109-10.524-10.524-27.587-10.524-38.11 0L256 217.892 46.002 7.894C35.478-2.63 18.416-2.63 7.893 7.894s-10.524 27.586 0 38.109l209.998 209.998L7.893 465.999c-10.524 10.524-10.524 27.586 0 38.109 10.524 10.524 27.586 10.523 38.109 0L256 294.11l209.997 209.998c10.524 10.524 27.587 10.523 38.11 0 10.523-10.524 10.523-27.586 0-38.109L294.111 256.001z" />
+      </svg>
+    </div>
+
+    <!-- Title -->
+    <h2 class="modal__title text-center" data-lang-en='Successfully'>Успешно</h2>
+
+    <div class="text-center" data-lang-en='You will be contacted shortly!'>В ближайшее время с Вами
+      свяжутся!
+    </div>
+    <div class="text-center modal-client__btns">
+      <button class='btn btn_orange btn-close-modal w-100' data-lang-en='Ok'>Ок</button>
+    </div>
+  </div>
+</div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>

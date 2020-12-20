@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ruilen en retourneren</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+
+  <!-- Custom -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175558229-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175558229-1');
+</script>
+
+<header class='header'>
+  <div class="container">
+    <div class="row-flex header__row a-center j-between">
+      <a class='logo header__logo col' href="./index.html" target="_self">I-ROBOT</a>
+
+      <div class="header__nav col">
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a class='nav__link h-basket mob-basket inline-flex a-center' href="./basket.html">
+          <svg style='margin-left: 0;' xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"
+            viewBox="0 0 197.7 166" preserveAspectRatio="xMinYMax meet" data-hook="svg-icon-2">
+            <path
+              d="M197.9 55.9L169.9 127.4 64.5 127.4 27.6 29.8 0 29.8 0.2 16.7 36.5 16.7 73.4 114.3 160.9 114.3 183 55.9">
+            </path>
+            <circle cx="143.8" cy="153" r="13"></circle>
+            <circle cx="90.8" cy="153" r="13"></circle><text class="items-count" text-anchor="middle" x="116" y="35"
+              dy=".48em">0</text>
+          </svg>
+        </a>
+        <nav class="nav">
+          <a class='nav__link' href="./about.html">Over ons</a>
+          <a class='nav__link' href="./cat.html">Producten</a>
+          <a class='nav__link' href="./delivery.html">Betaling en levering</a>
+          <a class='nav__link' href="./guarantee.html">Garantie en service</a>
+          <a class='nav__link' href="./return.html">Ruilen en retourneren</a>
+          <!-- <a class='nav__link' href="./index.html">Hoofdwebsite</a> -->
+          <a class='nav__link h-basket inline-flex a-center' href="./basket.html">
+            Winkelkarretje
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 197.7 166"
+              preserveAspectRatio="xMinYMax meet" data-hook="svg-icon-2">
+              <path
+                d="M197.9 55.9L169.9 127.4 64.5 127.4 27.6 29.8 0 29.8 0.2 16.7 36.5 16.7 73.4 114.3 160.9 114.3 183 55.9">
+              </path>
+              <circle cx="143.8" cy="153" r="13"></circle>
+              <circle cx="90.8" cy="153" r="13"></circle><text class="items-count" text-anchor="middle" x="116" y="35"
+                dy=".48em">0</text>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<sidebar class="sidebar">
+  <div class="sidebar__head flex a-center j-between">
+    Корзина
+    <button class='btn sidebar__close'>&#x203A;</button>
+  </div>
+  <div class="sidebar__body">
+    <div class="sidebar__products b-product__list"></div>
+    <div class="js-basket__total sidebar__total">€ 0</div>
+  </div>
+  <div class="sidebar__footer">
+    <a href='./basket.html' class="btn btn_blue sidebar__buy w-100">Een bestelling plaatsen</a>
+  </div>
+</sidebar>
+
+  <main class='main simple'>
+    <section class='section about'>
+      <div class="container">
+        <h1 class='simple__title text-center'>Ruilen en retourneren</h1>
+        <div class="simple__block">
+          <h2 class="simple__subtitle upper">1. Ruilen of retourneren? Het kan bij <strong>I-robot!</strong></h2>
+          <div class='simple__descr'>
+            <p>Ben je toch niet helemaal tevreden met je aankoop? Bij <strong>I-robot</strong> doen wij er alles aan om
+              jou tevreden te
+              stellen. Zo doen wij ons best om er achter te komen wat het precies is dat je wel zoekt en komen dan met
+              een goed en passend alternatief.</p>
+          </div>
+        </div>
+
+        <div class="simple__block">
+          <h2 class="simple__subtitle upper">2. Retourneren van je webbestelling</h2>
+          <div class='simple__descr'>
+            <p>
+              Via de <strong>I-robot</strong> webwinkel kan je, zonder het persoonlijk advies van een verkoper, een
+              product bij je thuis
+              laten bezorgen of afhalen in de winkel. Daarom kan je bij een aankoop op <a
+                href="I-robot.online"><strong>I-robot.online</strong></a> een product zonder opgave van reden binnen 14
+              dagen na levering
+              nog retour melden. Een aankoop online noemen we ‘koop op afstand’.
+            </p>
+            <p>
+              Je mag een bestelling via de website bekijken of het product aan je verwachting voldoet. Je hebt dan 14
+              dagen de tijd om het product weer terug te sturen of in de <strong>I-robot</strong> winkel af te geven. Je
+              mag met het
+              product hetzelfde doen als wanneer je iets in de winkel koopt. Je mag het product uitproberen, maar niet
+              echt in gebruik nemen.
+            </p>
+            <ul>
+              <li>Bekijk het product zoals je dat in de winkel zou kunnen doen</li>
+              <li>Haal het product gerust uit de verpakking en bekijk het</li>
+              <li>Haal het product netjes uit de doos, zodat de verpakking heel blijft</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="simple__block">
+          <h2 class="simple__subtitle upper">3. Voorbeelden:</h2>
+          <div class='simple__descr'>
+            <ul>
+              <li>Stofzuiger: Haal de stofzuiger uit de doos, bekijk hem van alle kanten, maar ga er niet de hele
+                woonkamer mee stofzuigen.</li>
+              <li>Frituurpan: Je kunt een frituurpan van alle kanten bekijken, maar je kunt hierin niet frituren als je
+                deze nog wilt retourneren. Laptop: Een laptop mag je aanzetten maar er mag niet mee gewerkt zijn.</li>
+              <li>Luchtbevochtiger: Je mag het apparaat aan en uit zetten, maar niet met water erin een paar uur
+                aanzetten
+                in je huis.</li>
+            </ul>
+            <p>Een product retourneer je compleet, in nieuwstaat en, indien redelijkerwijs mogelijk, in de originele
+              verpakking. Extra bijgekochte servicediensten of bezorgdiensten die reeds zijn uitgevoerd bij het
+              afleveren van het product, vallen niet onder het herroepingsrecht.</p>
+            <p>
+              Een product voldoet niet (volledig) aan de retourvoorwaarden als:
+            </p>
+
+            <ul>
+              <li>Het product niet compleet is zoals geleverd in de doos</li>
+              <li>De verpakking of het product onnodig beschadigd is</li>
+              <li>Het product meer gebruikt is dan nodig was om het te kunnen beoordelen (bekijken of proberen).</li>
+            </ul>
+
+            <p>
+              Indien je meer hebt gedaan dan nodig was om het artikel te kunnen beoordelen zal <strong>I-robot</strong>
+              een
+              waardevermindering van het product bij je in rekening brengen en/of de kosten die nodig zijn om het
+              product weer te kunnen verkopen. Hieronder valt ook het resetten van een laptop.
+            </p>
+
+            <p>
+              Werkt het apparaat niet goed? Dat valt onder de wettelijke garantieregeling. Wij helpen je dan met
+              reparatie/vervanging. Voor meer informatie kun je terecht bij jouw lokale <strong>I-robot</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="simple__block">
+          <h2 class="simple__subtitle upper">4. Artikel terug brengen naar een <strong>I-robot</strong></h2>
+          <div class='simple__descr'>
+            <p>
+              Wanneer je besluit jouw product te retourneren ontvangen we die graag retour bij de
+              <strong>I-robot</strong> winkel die
+              jouw bestelling heeft geleverd. De contactgegevens zijn te vinden op de factuur. Je krijgt het
+              aankoopbedrag, inclusief eventuele verzendkosten, teruggestort op je bankrekening. Als je er voor kiest om
+              het product per post te retourneren, dan zijn de kosten voor het retourtransport voor eigen rekening.
+              Kosten die je hebt gemaakt voor aanvullende dienstverleningen die zijn uitgevoerd, zoals inbouwen van
+              apparatuur, ontvang je niet retour. Welke winkel jouw product heeft verzonden kun je terugvinden in de
+              bevestigingsmail. Vermeld in elk geval je ordernummer of factuurnummer voor snelle opvolging. Liever even
+              persoonlijk contact? Bekijk hier alle contactmogelijkheden.
+            </p>
+            <ul>
+              <li>
+                Komt het even niet uit om het artikel zelf te retourneren in de winkel of is het product te groot om per
+                post retour te sturen? Neem contact op met de lokale <strong>I-robot</strong> om een retourafspraak te
+                maken. De kosten
+                die hieraan verbonden zitten verschillen per product, maar bedragen maximaal €30,-. Informeer naar de
+                mogelijkheden.
+              </li>
+              <li>
+                Als je er voor kiest de artikelen per post te retourneren, en er gaat iets mis in termen van kwijtraken
+                of (extra) ontstane schade aan het artikel, is dat risico voor jou. Daarom adviseren wij de producten
+                retour te brengen in de winkel of contact op te nemen met jouw <strong>I-robot</strong> voor een
+                retouropdracht.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="simple__block">
+          <h2 class="simple__subtitle upper">5. Wat kun je niet ruilen of retourneren?</h2>
+          <div class='simple__descr'>
+            <p>
+              Sommige producten kunnen niet retour gestuurd of geruild worden:
+            </p>
+            <ul>
+              <li>Softwarepakketten waarvan de verzegeling is ge- of verbroken of die zijn geïnstalleerd/geregistreerd
+              </li>
+              <li>Servicedienst waarvan gebruik is gemaakt</li>
+              <li>Inktcartridges en tonercassettes waarvan de verpakking is geopend; de waardevermindering na openen van
+              </li>
+              een cartridge of toner is 100%
+              <li>Ingewisselde of ingevulde vouchers en tegoedbonnen</li>
+              <li>Artikelen die vanwege de hygiëne niet geruild kunnen worden (als deze producten geseald zijn en de
+                seal
+                is verbroken), zoals in-ear dopjes, hoofdtelefoons, stijl- en krultangen, Sodastreamcilinders,
+                tandenborstels, scheer-, of epileerapparaten waarvan de verpakking is geopend.</li>
+              <li>Artikelen die geregistreerd zijn</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="simple__block">
+          <h2 class="simple__subtitle upper">6. Wat is een verzegeld product?</h2>
+          <div class='simple__descr'>
+            <p>
+              Sommige producten zijn verzegeld, dit zijn voornamelijk hygiëne producten. Je kunt met behoudt van de
+              zegel beoordelen hoe het product eruit ziet en kunnen wij bij eventueel retourneren vaststellen dat het
+              product ongebruikt is. Het verbreken van de verzegeling zorgt ervoor dat wij het product niet kunnen
+              terugnemen.
+            </p>
+          </div>
+        </div>
+
+        <div class="simple__block">
+          <h2 class="simple__subtitle upper">7. Ruilen artikelen gekocht in een <strong>I-robot</strong></h2>
+          <div class='simple__descr'>
+            <p>
+              In onze winkels voorzien wij jou van persoonlijk advies. Toch kan het voorkomen dat je niet tevreden bent
+              over het gekochte apparaat. Dat vinden wij vervelend en daar willen we je graag bij helpen.
+            </p>
+            <p>
+              Indien je niet tevreden bent met je product die gekocht is in een van onze <strong>I-robot</strong>
+              winkels, bieden wij de
+              service dat het product binnen 14 dagen geruild mag worden. Het product moet in originele verpakking,
+              compleet, ongebruikt en met aankoopnota ingeleverd worden. Speciale bestellingen of op maat gemaakte
+              artikelen kunnen niet omgeruild worden in de winkel. Producten die niet geruild kunnen worden in de winkel
+              staan onder bovenstaand kopje “Wat kun je niet ruilen of retourneren?”
+            </p>
+          </div>
+        </div>
+
+        <div class="simple__block">
+          <h2 class="simple__subtitle upper">8. Functioneert het product niet naar behoren?</h2>
+          <div class='simple__descr'>
+            <p>
+              Is je apparaat technisch niet in orde? Dan valt dit onder de garantieregeling en helpen we je graag met
+              een passende oplossing.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__images row-flex j-center a-center">
+      <img class='col' src="img/post.png" alt="">
+      <img class='col' src="img/method-paypal.png" alt="">
+      <img class='col' src="img/method-ideal.png" alt="">
+    </div>
+    <nav class="nav footer__nav flex j-center">
+      <a class='nav__link' href="./about.html">Over ons</a>
+      <a class='nav__link' href="./cat.html">Producten</a>
+      <a class='nav__link' href="./delivery.html">Betaling en levering</a>
+      <a class='nav__link' href="./guarantee.html">Garantie en service</a>
+      <a class='nav__link' href="./return.html">Ruilen en retourneren</a>
+    </nav>
+    <div class="copyright text-center upper">
+      &copy; 2017-2020 I-robot.
+    </div>
+  </div>
+</footer>
+
+<div class="modal">
+  <div class="modal__overlay"></div>
+
+  <!-- Modal Consult -->
+  <div class="modal__content modal-buy">
+    <!-- Close modal -->
+    <div class="modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" width="512" height="512">
+        <path
+          d="M294.111 256.001L504.109 46.003c10.523-10.524 10.523-27.586 0-38.109-10.524-10.524-27.587-10.524-38.11 0L256 217.892 46.002 7.894C35.478-2.63 18.416-2.63 7.893 7.894s-10.524 27.586 0 38.109l209.998 209.998L7.893 465.999c-10.524 10.524-10.524 27.586 0 38.109 10.524 10.524 27.586 10.523 38.109 0L256 294.11l209.997 209.998c10.524 10.524 27.587 10.523 38.11 0 10.523-10.524 10.523-27.586 0-38.109L294.111 256.001z" />
+      </svg>
+    </div>
+
+    <div class="modal-buy__step active" data-step='1'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Registratie</h2>
+
+      <!-- Form -->
+      <form action='' class="modal-buy__form">
+        <!-- <div class="modal-buy__form-inputs"> -->
+        <!-- </div> -->
+        <input class='input' name='name' type="text" placeholder="Naam" required>
+        <input class='input' name='sername' type="text" placeholder="Achternaam" required>
+        <input class='input' name='email' type="email" placeholder="Email" required>
+        <input class='input' name='phone' type="tel" placeholder="Telefoon" required>
+        <input class='input' name='city' type="text" placeholder="Stad" required>
+        <input class='input' name='address' type="text" placeholder="Adres" required>
+        <input class='input' name='zip' type="text" placeholder="Postcode" required>
+        <button type='submit' class='btn btn_blue w-100 modal-buy__next'>Betalen</button>
+      </form>
+    </div>
+
+    <div class="modal-buy__step" data-step='2'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Selecteer betalingsmethode</h2>
+
+      <div class="modal-buy__methods row-flex">
+        <button class='btn btn_blue w-100 modal-buy__next col flex a-center j-center'><img src="img/method-ideal.png">
+          Ideal</button>
+        <button disabled class='btn btn_blue w-100 modal-buy__paypal modal-buy__next col'><img
+            src="img/method-paypal.png">
+          PayPal (Tijdelijk niet beschikbaar  )</button>
+      </div>
+    </div>
+
+    <div class="modal-buy__step" data-step='3'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Selecteer bank</h2>
+
+      <div class="modal-buy__methods row-flex">
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>ING</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>RaboBank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>ABN Amro
+          Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>SNS Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>ASN Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Triodos
+          Bank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>RegioBank</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Van Lanschot
+          Bankiers</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Knab</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Bunq</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Moneyou</button>
+        <button class='btn modal-buy__bank btn_trans w-100 col flex a-center j-center'>Handelsbanken</button>
+      </div>
+      <button type='submit' class='btn btn_blue w-100 modal-buy__next disabled'>Ontvang een factuur</button>
+    </div>
+
+    <div class="modal-buy__step text-center" data-step='4'>
+      <!-- Title -->
+      <h2 class="modal__title text-center">Facturering</h2>
+
+      <div class="modal-buy__bill">
+        <img src="img/ajax-loader.gif" alt="">
+        <p>Verwacht lopende facturering</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal client -->
+  <div class="modal__content modal-success">
+    <!-- Close modal -->
+    <div class="modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.001 512.001" width="512" height="512">
+        <path
+          d="M294.111 256.001L504.109 46.003c10.523-10.524 10.523-27.586 0-38.109-10.524-10.524-27.587-10.524-38.11 0L256 217.892 46.002 7.894C35.478-2.63 18.416-2.63 7.893 7.894s-10.524 27.586 0 38.109l209.998 209.998L7.893 465.999c-10.524 10.524-10.524 27.586 0 38.109 10.524 10.524 27.586 10.523 38.109 0L256 294.11l209.997 209.998c10.524 10.524 27.587 10.523 38.11 0 10.523-10.524 10.523-27.586 0-38.109L294.111 256.001z" />
+      </svg>
+    </div>
+
+    <!-- Title -->
+    <h2 class="modal__title text-center" data-lang-en='Successfully'>Успешно</h2>
+
+    <div class="text-center" data-lang-en='You will be contacted shortly!'>В ближайшее время с Вами
+      свяжутся!
+    </div>
+    <div class="text-center modal-client__btns">
+      <button class='btn btn_orange btn-close-modal w-100' data-lang-en='Ok'>Ок</button>
+    </div>
+  </div>
+</div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>
